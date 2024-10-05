@@ -46,6 +46,7 @@
 	<!-- Owl Carousel  -->
 	<link rel="stylesheet" href="css/owl.carousel.min.css">
 	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link rel="preload" as="image" href="images/bg.jpg">
 
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style.css">
@@ -80,7 +81,7 @@
 		</div>
 	</nav>
 
-	<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(images/bg.jpg);" data-stellar-background-ratio="0.5">
+	<header id="fh5co-header" class="fh5co-cover lazyload" role="banner" data-bg="images/bg.jpg" data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row">
@@ -94,7 +95,7 @@
 							<h2>"I have found the one whom my soul loves." <br>Song of Solomon 3:4</h2>
 							<div class="flipTimebox">
 								<div class="clock clock-fix"></div>
-							  </div>
+							</div>
 							<p><a href="#fh5co-event" class="btn btn-default btn-sm">Save our date</a></p>
 						</div>
 					</div>
@@ -103,7 +104,17 @@
 		</div>
 	</header>
 
-
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			var header = document.querySelector("#fh5co-header");
+			var bg = header.getAttribute("data-bg");
+			var img = new Image();
+			img.src = bg;
+			img.onload = function() {
+				header.style.backgroundImage = "url(" + bg + ")";
+			};
+		});
+	</script>
 
 	<div id="fh5co-event" class="fh5co-bg">
 		<div class="overlay"></div>
@@ -122,31 +133,32 @@
 									<h3>Betrothal</h3>
 									<div class="event-col">
 										<i class="icon-calendar"></i>
-										<span>21 October 2023</span>
+										<span>16 November 2024</span>
 									</div>
 									<div class="event-col">
 
 										<i class="icon-clock"></i>
-										<span>11:30 AM</span>
+										<span>15:00 PM</span>
 									</div>
-									<p>At <b>St. Vincent De Paul Church Edathotty, Kannur.</b> Followed by lunch at <b>Robin's Wedding Cafe, Edathotty.</b></p>
-									<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3903.673315773661!2d75.71257847590881!3d11.927808088299846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba5cd2b69442ebf%3A0x41b4e77a403a15b4!2sDe%20Paul%20Church%2C%20Edathotty!5e0!3m2!1sen!2sin!4v1696094112600!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+									<p>At <b>Nghia Hoa Church Tan Binh,Ho Chi Minh.</b><br> Followed by dinner at <b>The ADORA Center, Ho Chi Minh.</b></p>
+									<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.3250147125714!2d106.65437808511317!3d10.786400131599287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ecc05877a39%3A0xa4fab7ba6e49e674!2zR2nDoW8geOG7qSBOZ2jEqWEgSMOyYQ!5e0!3m2!1svi!2s!4v1728133582520!5m2!1svi!2s" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 								</div>
 							</div>
+							
 							<div class="col-md-6 col-sm-6 text-center">
 								<div class="event-wrap animate-box">
 									<h3>Wedding</h3>
 									<div class="event-col">
 										<i class="icon-calendar"></i>
-										<span>29 October 2023</span>
+										<span>17 November 2024</span>
 									</div>
 									<div class="event-col">
 
 										<i class="icon-clock"></i>
 										<span>12:00 PM</span>
 									</div>
-									<p>At <b>St. Antony's Church Cheriyappilly, North Paravur.</b> Followed by lunch at <b>IMA Hall, North Paravur</b></p>
-						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3927.690238117892!2d76.24293817588756!3d10.124421489987455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0810402ea732f5%3A0x7e23209bf83c2a9b!2sSt.Antony&#39;s%20Roman%20Catholic%20Church!5e0!3m2!1sen!2sin!4v1696094216568!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+									<p>At <b>Golden Lotus, Bien Hoa, Dong Nai</b><br><br></p>
+									<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.209968599081!2d106.82066927586999!3d10.947505956013115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174deb273dfbf9b%3A0x285b88f5f830de65!2zTmjDoCBIw6BuZyBUaeG7h2MgQ8aw4bubaSBTZW4gVsOgbmcgLSBCacOqbiBIw7Jh!5e0!3m2!1svi!2s!4v1728134016741!5m2!1svi!2s" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 								</div>
 							</div>
 						</div>
@@ -167,50 +179,48 @@
 			<div class="row row-bottom-padded-md">
 				<div class="col-md-12">
 					<ul id="fh5co-gallery-list">
-						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/RS4.jpg); "> 
+						<li class="one-third animate-box" data-animate-effect="fadeIn">
 							<a href="images/RS4.jpg">
-								<div class="case-studies-summary">
-								</div>
+								<img src="images/RS4.jpg" alt="RS4" loading="lazy" style="width:100%; height:auto;">
+								<div class="case-studies-summary"></div>
 							</a>
 						</li>
-						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/RS5.jpg); "> 
+						<li class="one-third animate-box" data-animate-effect="fadeIn">
 							<a href="images/RS5.jpg">
-								<div class="case-studies-summary">
-								</div>
+								<img src="images/RS5.jpg" alt="RS5" loading="lazy" style="width:100%; height:auto;">
+								<div class="case-studies-summary"></div>
 							</a>
 						</li>
-						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/RS6.jpg); "> 
+						<li class="one-third animate-box" data-animate-effect="fadeIn">
 							<a href="images/RS6.jpg">
-								<div class="case-studies-summary">
-								</div>
+								<img src="images/RS6.jpg" alt="RS6" loading="lazy" style="width:100%; height:auto;">
+								<div class="case-studies-summary"></div>
 							</a>
-						</li>		
-						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/RS1.jpg); "> 
-						<a href="images/RS1.jpg">
-							<div class="case-studies-summary">
-							</div>
-						</a>
-					</li>
-
-					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/RS2.jpg); "> 
-						<a href="images/RS2.jpg">
-							<div class="case-studies-summary">
-							</div>
-						</a>
-					</li>
-					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/RS3.jpg); "> 
-						<a href="images/RS3.jpg">
-							<div class="case-studies-summary">
-							</div>
-						</a>
-					</li>
-					
-					</ul>		
+						</li>
+						<li class="one-third animate-box" data-animate-effect="fadeIn">
+							<a href="images/RS1.jpg">
+								<img src="images/RS1.jpg" alt="RS1" loading="lazy" style="width:100%; height:auto;">
+								<div class="case-studies-summary"></div>
+							</a>
+						</li>
+						<li class="one-third animate-box" data-animate-effect="fadeIn">
+							<a href="images/RS2.jpg">
+								<img src="images/RS2.jpg" alt="RS2" loading="lazy" style="width:100%; height:auto;">
+								<div class="case-studies-summary"></div>
+							</a>
+						</li>
+						<li class="one-third animate-box" data-animate-effect="fadeIn">
+							<a href="images/RS3.jpg">
+								<img src="images/RS3.jpg" alt="RS3" loading="lazy" style="width:100%; height:auto;">
+								<div class="case-studies-summary"></div>
+							</a>
+						</li>
+					</ul>
 				</div>
 			</div>
 		</div>
 	</div>
-
+	
 
 
 	<div id="fh5co-services" class="fh5co-section-gray">
